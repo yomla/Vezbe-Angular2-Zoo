@@ -1,5 +1,17 @@
 <h1>Animals</h1>
-<hr>
+<hr><br>
+<form>
+    <label for="species">Species:</label>
+    <input name="species" type="text" [(ngModel)]="newAnimal.species"/>
+  
+    <label for="name">Name:</label>
+    <input name="name" type="text" [(ngModel)]="newAnimal.name"/>
+  
+    <label for="dateOfBirth">Date of birth:</label>
+    <input name="dateOfBirth" type="text" [(ngModel)]="newAnimal.dateOfBirth"/>
+  
+    <button (click)="addAnimal(newAnimal)">Add Animal</button>
+</form><br>
 
 <table>
 	<th>Species</th>

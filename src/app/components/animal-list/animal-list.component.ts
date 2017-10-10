@@ -8,7 +8,8 @@ import { Animal } from '../../models/animal.model';
 })
 export class AnimalListComponent implements OnInit {
 
-  private animals: any[];
+   animals: any[];
+   newAnimal: Animal = new Animal('','','');
 
   constructor() { 
     this.animals = [
@@ -26,7 +27,12 @@ export class AnimalListComponent implements OnInit {
   moveToTop(animal) {
 		this.remove(animal);
 		this.animals.unshift(animal);
-	}
+  }
+  
+  addAnimal() {
+      this.animals.push(this.newAnimal);
+      this.newAnimal = new Animal('','','');
+  }
 
   ngOnInit() {
   }
