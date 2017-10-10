@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Animal } from '../../models/animal.model';
 
 @Component({
   selector: 'app-animal-list',
@@ -11,35 +12,9 @@ export class AnimalListComponent implements OnInit {
 
   constructor() { 
     this.animals = [
-			{
-				species: 'Dog',
-				name: 'Ben',				
-				dateOfBirth: '12-12-2012'
-			},
-
-			{
-				species: 'Cat',
-				name: 'Cloe',				
-				dateOfBirth: '05-05-2010'
-			},
-
-			{
-				species: 'Parot',
-				name: 'Jargo',				
-				dateOfBirth: ''
-			},
-
-			{
-				species: 'Fish',
-				name: 'Nemo',				
-				dateOfBirth: '08-08-2016'
-			},
-			{
-				species: 'Horse',
-				name: 'Thunder',				
-				dateOfBirth: ''
-			}
-
+      new Animal ('Dog', 'Ben', '21-12-2012'),      
+      new Animal ('Cat', 'Cloe', '21-12-2012'),
+      new Animal ('Fish', 'Nemo', '21-12-2012')	
 		];
   }
 
