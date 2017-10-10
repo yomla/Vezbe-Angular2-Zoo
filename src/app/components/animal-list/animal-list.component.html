@@ -1,0 +1,13 @@
+<h1>Animals</h1>
+<hr>
+
+<table>
+	<th>Species</th>
+	<th>Name</th>
+	<th>Date of birth</th>
+	<tr *ngFor="let animal of animals">
+		<td > {{ animal.species }} </td>
+		<td > {{ animal.name }} </td>
+		<td > {{ animal.dateOfBirth }} </td>
+	</tr>
+</table>
