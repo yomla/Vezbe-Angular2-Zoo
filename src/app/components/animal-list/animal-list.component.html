@@ -16,12 +16,16 @@
 <table>
 	<th>Species</th>
 	<th>Name</th>
-	<th>Date of birth</th>
+  <th>Date of birth</th>
+  <th>Sector name</th>
+	<th>Sector surface</th>
 	<tr *ngFor="let animal of animals">
 		<td > {{ animal.species }} </td>
 		<td > {{ animal.name }} </td>
 		<td *ngIf="animal.dateOfBirth"> {{ animal.dateOfBirth }} </td>
     <td *ngIf="!animal.dateOfBirth"> Unknown </td>
+    <td > {{ animal.sector.name }} </td>
+		<td > {{ animal.sector.surface }} </td>
     <button (click)="remove(animal)">Remove</button>
     <button (click)="moveToTop(animal)">Move to top</button>
 	</tr>
