@@ -46,7 +46,7 @@ export class AnimalListComponent implements OnInit {
   showAnimalsBySector(sector) {	
 		const animalsList=[];		
 		this.animals.forEach(function(animal) {
-			if(animal.sector && animal.sector.name == sector.name) 
+			if(animal.sector && animal.sector.name === sector.name) 
 				animalsList.push(animal.name + '-' + animal.species); 
 		});		
 		alert(animalsList.toString());
