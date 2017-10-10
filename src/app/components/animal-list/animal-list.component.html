@@ -9,6 +9,7 @@
 		<td > {{ animal.species }} </td>
 		<td > {{ animal.name }} </td>
 		<td *ngIf="animal.dateOfBirth"> {{ animal.dateOfBirth }} </td>
-		<td *ngIf="!animal.dateOfBirth"> Unknown </td>
+    <td *ngIf="!animal.dateOfBirth"> Unknown </td>
+    <button (click)="remove(animal)">Remove</button>
 	</tr>
 </table>
